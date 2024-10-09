@@ -18,10 +18,13 @@ def get():
         "tails",
     ]
 
+    coin_toss_result_display = f"Coin Toss Result: {random.choice(coin_sides)}"
+    print(coin_toss_result_display)
+
     return Div(
         Div(
             P("Hello World!"),
-            P(f"{random.choice(coin_sides)}"),
+            P(coin_toss_result_display),
         ),
         hx_get="/change",
         style=f"background-color: {random.choice(color_list)}; padding: 20px",
