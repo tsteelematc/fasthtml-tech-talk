@@ -21,9 +21,7 @@ def get():
     return Div(
         Div(
             P("Hello World!"),
-            P(
-                f"{random.choice(coin_sides)}",
-            ),
+            P(f"{random.choice(coin_sides)}"),
         ),
         hx_get="/change",
         style=f"background-color: {random.choice(color_list)}; padding: 20px",
